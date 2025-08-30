@@ -1,0 +1,202 @@
+    body {
+      background: linear-gradient(to bottom, #050511, #0b0b20);
+      overflow: hidden;
+      margin: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    .galaxy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(100, 100, 255, 0.2) 0%, rgba(5, 5, 17, 0.8) 70%);
+      opacity: 0.6;
+      animation: pulse 20s infinite ease-in-out;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+
+    .comet {
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: fall 2s linear infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 0.3; }
+      100% { opacity: 0.6; }
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) translateX(-50px);
+        opacity: 0;
+      }
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+    .star:hover {
+      transform: scale(1.5);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+    }
+    .comet {
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: fall 2s linear infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 0.3; }
+      100% { opacity: 0.6; }
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) translateX(-50px);
+        opacity: 0;
+      }
+    }
+    .medium-star {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: twinkle 2s infinite alternate, appear 1s forwards 2s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .medium-star:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+      cursor: pointer;
+    }
+    .big-star {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      background: url('https://cdn.discordapp.com/avatars/488111891638517761/15fcea7f7890ffe4453023f60ee191e0.webp?size=1024') center/cover no-repeat;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+      animation: bigStarAppear 20s forwards 15s;
+      box-shadow: 0 0 30px rgba(255, 235, 59, 0.8), 0 0 10px rgba(255, 255, 255, 0.5) inset;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .big-star:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 0 0 150px rgba(255, 235, 59, 1), 0 0 15px rgba(255, 255, 255, 0.7) inset;
+    }
+    #mediumStar1 {
+      background: radial-gradient(circle, #b3d9ff, #4682b4);
+      box-shadow: 0 0 10px rgba(179, 217, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+    }
+    #mediumStar2 {
+      background: radial-gradient(circle, #ff9999, #8b0000);
+      box-shadow: 0 0 10px rgba(255, 153, 153, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+    }
+    #mediumStar3 {
+      background: radial-gradient(circle, #fff9b3, #daa520);
+      box-shadow: 0 0 10px rgba(255, 249, 179, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+    }
+    #mediumStar4 {
+      background: radial-gradient(circle, #e6e6fa, #6a5acd);
+      box-shadow: 0 0 10px rgba(230, 230, 250, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+    }
+    #mediumStar5 {
+      background: radial-gradient(circle, #98fb98, #228b22);
+      box-shadow: 0 0 10px rgba(152, 251, 152, 0.5), 0 0 5px rgba(255, 255, 255, 0.3) inset;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+    @keyframes appear {
+      0% { opacity: 0; transform: scale(0); }
+      100% { opacity: 0.8; transform: scale(1); }
+    }
+    @keyframes bigStarAppear {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+      100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+    .nebula {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(147, 112, 219, 0.15), transparent);
+      pointer-events: none;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 235, 59, 0.5);
+    }

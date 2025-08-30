@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para reetie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="reet.css">
+  <link rel="shortcut icon" href="https://media.tenor.com/NGA5j9mYz0UAAAAj/nso.gif" />
+
+</head>
+<body class="min-h-screen flex items-center justify-center relative">
+  <div class="nebula"></div>
+  <h1 class="text-4xl font-bold text-white absolute top-8 z-10">Mi universo</h1>
+  <div id="starContainer"></div>
+  <div id="mediumStar1" class="medium-star" onclick="openModal('Stephenson 2-18 (St2-18)', 'Es una de las estrellas más grandes conocidas, una supergigante roja. Su radio es estimado en unas 2150 veces el del Sol. Si se colocara en el centro del sistema solar, su fotosfera envolvería la órbita de Saturno.')"></div>
+  <div id="mediumStar2" class="medium-star" onclick="openModal('UY Scuti', 'Esta hipergigante variable roja es a menudo citada como la estrella más grande del universo, con un radio 1700 veces mayor que el del Sol. Su volumen sería suficiente para albergar a casi 5 mil millones de soles.')"></div>
+  <div id="mediumStar3" class="medium-star" onclick="openModal('VY Canis Majoris', 'Otra hipergigante roja ubicada en nuestra galaxia, la Vía Láctea. Su radio se ha medido en alrededor de 1420 veces el del Sol, aunque las estimaciones varían.')"></div>
+  <div id="mediumStar4" class="medium-star" onclick="openModal('NML Cygni', 'Se estima que tiene un ancho aproximadamente 1639 veces mayor que el del Sol.')"></div>
+  <div id="mediumStar5" class="medium-star" onclick="openModal('AH Scorpii', 'Esta gigante roja tiene un radio aproximado de 1411 veces el del Sol y se encuentra en la Vía Láctea.')"></div>
+  <div id="bigStar" class="big-star" onclick="openModal('reet', 'Esta es la estrella mas brillante y única que tiene el universo, su luminosidad opaca a las 5 estrellas mas grandes del universo e incluso las hace parecer estrellas comunes, reet no solo es una estrella, es el núcleo de mi universo y lo que hace que quiera explorarlo por completo y sin descansos, sin duda es lo mas importante en mi vida y la estrella que mas veo por las noches <3')"></div>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <h2 id="modalTitle" class="text-2xl font-bold text-yellow-300 mb-4">Nombre</h2>
+      <p id="modalDescription" class="text-lg">Descripción</p>
+      <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">Mwah</button> 
+    </div>
+  </div>
+
+      <script src="reetie.js"></script> 
+      
+
+</body>
+</html>
